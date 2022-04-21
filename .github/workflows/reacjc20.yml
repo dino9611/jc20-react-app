@@ -1,0 +1,19 @@
+name: JC20 create-react-app CD
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: install library
+        run: npm ci
+        # npm ci dan npm install sama saja tetapi lebih disrankan ci untuk production
+      - name: build app create-react-app
+        run: npm run build
