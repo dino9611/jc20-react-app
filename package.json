@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "rsync -avP build/ root@172.105.119.73:/var/www/jc20.com/"
   },
   "eslintConfig": {
     "extends": [
